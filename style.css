@@ -494,16 +494,7 @@ html {
     right: 2%;
 }
 
-.header-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 12vh;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
+
 
 .project-content {
     display: flex;
@@ -512,7 +503,7 @@ html {
     padding: 20vh 5% 5% 5%;
     height: calc(100% - 25vh);
     opacity: 0;
-    background-color: #223d29;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 9, 108, 0.5));
     transition: opacity 0.5s ease;
     z-index: -1; /* Garde le contenu en arrière-plan */
 }
@@ -531,23 +522,45 @@ html {
     opacity: 0.8;
 }
 
+
+
 .video-container {
-    width: 35%;
-    aspect-ratio: 1;
-    border: 2px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
     overflow: hidden;
-    margin-right: 5%;
-	margin-bottom: 10vh;
+    background-color: #ffffff1f; /* Ajoute un fond noir */
+    width: 100%; /* Ajuste la largeur selon vos besoins */
+    max-width: 400px; /* Limite la largeur maximale */
+    margin-bottom:auto; /* Centre le conteneur */
+    margin-right: 0%;
+    padding: 20px; /* Ajoute un padding pour créer un espace autour de la vidéo */
+    padding-bottom: 50px;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
 
-.video-container video {
+#project-video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
+
+.video-duration {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
 
 .cursor {
 	position: fixed;
@@ -726,7 +739,7 @@ right: 0;
 
 /* Section Education */
 .education-section {
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: #000000;
     padding: 10vh 5% 5vh 5%;
     display: flex;
